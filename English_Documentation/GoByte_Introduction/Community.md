@@ -42,7 +42,7 @@ GoByte Foundation open to the community
 Other community platforms for international usership.
 Telegram
 
-[GoByte SOUTH KOREA]( https://t.me/gobyteKR) 
+[GoByte SOUTH KOREA]( https://t.me/gobyteKR)   
 [GoByte RUSSIA](https://t.me/gobyte_russia)  
 [GoByte SPAIN](https://t.me/gobyte_spain)  
 [GoByte GERMAN](https://t.me/gobyteDE)  
