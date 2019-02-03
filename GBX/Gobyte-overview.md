@@ -88,8 +88,8 @@ We also provide a script to deploy Master node:
 The GoByte Nodes support both a gRPC Service and a HTTP Gateway
 
 ## 4.1 API Definition
-Please see the isnsight API.
-- [Insight API](https://github.com/gobytecoin/insight-api-gobyte/blob/master/README.md)
+Please see the insight API.
+- [Insight API](https://github.com/gobytecoin/gobyte/tree/master/src/rpc)
 
 ## 4.2 Explanation of APIs
 ### 4.2.1 gRPC interface
