@@ -1,4 +1,4 @@
-# Full Overview of TRON
+# Full Overview of GOBYTE
 
 ## 1.1 Project repositories
 ### https://github.com/gobytecoin
@@ -16,7 +16,7 @@ GBX adopts a PoW algorithm called NeoScrypt.
 The network currently produces 1 block per 120 seconds.
 
 ## 1.5 Transaction model
-The adopted transaction model is the UTXO model. The smallest unit of GBX is bit, 1 GBX=100,000,000 bits.
+The adopted transaction model is the UTXO model. The smallest unit of GBX is bit, 1 GBX=10,000,000 bits.
 
 ## 1.6 Account model
 One account has only one corresponding address, which is needed for transfers. The multi-signature mechanism is not yet implemented on the current version of network. There are three ways to create an account on the main blockchain.
@@ -96,40 +96,58 @@ Please see the isnsight API.
 The Full Node and Master nodes each run a gRPC service that you can connect to.
 
 - [gRPC Tutorial](https://grpc.io/docs/)
-- [gRPC API](https://github.com/tronprotocol/Documentation/blob/master/English_Documentation/TRON_Protocol/TRON_Wallet_RPC-API.md)
+- [gRPC API](https://github.com/tronprotocol/Documentation/blob/master/English_Documentation/TRON_Protocol/TRON_Wallet_RPC-API.md) -> Edit
 
-Please refer to the following two classes for a gRPC example in Java.
-```
-https://github.com/tronprotocol/wallet-cli/blob/master/src/main/java/org/tron/walletserver/WalletApi.java
-
-https://github.com/tronprotocol/wallet-cli/blob/master/src/main/java/org/tron/walletserver/GrpcClient.java
-```
 
 ### 4.2.2 HTTP Interface
-The FullNode and SolidityNode both have an HTTP Service running on them. All parameters are encoded as `HEX` and returned as Hex or `base58check`. If you're trying to pass an address in, please decode from `base58check` and convert it to `HEX`.
+The FullNode and MasterNode both have an HTTP Service running on them. All parameters are encoded as `HEX` and returned as Hex or `base58check`. If you're trying to pass an address in, please decode from `base58check` and convert it to `HEX`.
 
-- [HTTP Service API](https://github.com/tronprotocol/Documentation/blob/master/TRX/Tron-http.md)
+- [HTTP Service API](https://github.com/tronprotocol/Documentation/blob/master/TRX/Tron-http.md) -> Edit
 
-- [Address DEBUG Tool](https://github.com/tronprotocol/tron-demo/raw/master/TronConvertTool.zip)
+- [Address DEBUG Tool](https://github.com/tronprotocol/tron-demo/raw/master/TronConvertTool.zip) -> Edit
 
 # 5. Transaction Fees
-Having too many transactions will clog our network like Ethereum and may incur delays on transaction confirmation. To keep the network operating smoothly, TRON network grants every account a free pool of `Bandwidth points` for free transactions every 24 hours. To engage in transactions more frequently requires freezing TRX for additional bandwidth points, or paying the fee in TRX.
+To keep the network operating smoothly, GoByte network requires every account to pay a fee for every transaction. 
 
-See also: https://github.com/tronprotocol/Documentation/blob/master/English_Documentation/TRON_Protocol/Mechanism_Introduction.md
+The fee schedule for GoByte 0.13.x is as follows:
 
-## 5.1 Definition of Bandwidth Points
-Transactions are transmitted and stored in the network in byte arrays. Bandwidth points consumed in a transaction equals the size of its byte array.
-If the length of a byte array is 200 then the transaction consumes 200 bandwidth points.
+Transaction type	Recommended fee	Per unit
+Standard transaction	.00001 GBX	Per kB of transaction data
+InstantSend autolock	.00001 GBX	Per kB of transaction data
+InstantSend	.0001 GBX	Per transaction input
+PrivateSend	.001 GBX	Per 10 rounds of mixing (average)
 
-## 5.2 Freeze/unfreeze mechanism 
-TRX can be frozen for a minimum of 3 days to gain both `TRON Power (TP)` for voting and `Bandwidth points` for covering network fees. `TRON Power` is gained at a 1:1 ratio with the amount of frozen TRX.
+See also: ???
 
-The amount of bandwidth points granted follows a formula:
+## 5.1 Definition of Private Send
+PrivateSend gives you true financial privacy by obscuring the origins of your funds. 
+All the GoByte in your wallet is comprised of different “inputs”, which you can think of as separate, discrete coins. 
+PrivateSend uses an innovative process to mix your inputs with the inputs of two other people, without having your coins ever leave your wallet. You retain control of your money at all times.
+
+The PrivateSend process works like this:
+
+PrivateSend begins by breaking your transaction inputs down into standard denominations. These denominations are 0.001, 0.01, 0.1, 1 and 10 GBX – much like the paper money you use every day.
+Your wallet then sends requests to specially configured software nodes on the network, called “masternodes”. 
+These masternodes are informed then that you are interested in mixing a certain denomination. 
+No identifiable information is sent to the masternodes, so they never know “who” you are.
+When two other people send similar messages, indicating that they wish to mix the same denomination, a mixing session begins. 
+The masternode mixes up the inputs and instructs all three users’ wallets to pay the now-transformed input back to themselves. 
+Your wallet pays that denomination directly to itself, but in a different address (called a change address).
+In order to fully obscure your funds, your wallet must repeat this process a number of times with each denomination. Each time the process is completed, it’s called a “round”. Each round of PrivateSend makes it exponentially more difficult to determine where your funds originated. The user may choose between 1-16 rounds of mixing.
+This mixing process happens in the background without any intervention on your part. When you wish to make a transaction, your funds will already be anonymized. No additional waiting is required.
+
 ```
-Your Frozen TRX
----------------- * 54Gb of network bandwidth points available = Your available share of bandwidth points
-Total Frozen TRX
+Note that PrivateSend transactions will be rounded up so that all transaction inputs are spent. Any excess GoByte will be spent on the transaction fee.
+
+IMPORTANT: Your wallet only contains 1000 of these “change addresses”. Every time a mixing event happens, one of your addresses is used up. Once enough of them are used, your wallet must create more addresses. It can only do this, however, if you have automatic backups enabled. Consequently, users who have backups disabled will also have PrivateSend disabled.
 ```
+
+## 5.2 Definition of Instant Send
+Traditional decentralized cryptocurrencies must wait for certain period of time for enough blocks to pass to ensure that a transaction is both irreversible and not an attempt to double-spend money which has already been spent elsewhere. This process is time-consuming, and may take anywhere from 15 minutes to one hour for the widely accepted number of six blocks to accumulate. Other cryptocurrencies achieve faster transaction confirmation time by centralizing authority on the network to various degrees.
+
+GoByte suffers from neither of these limitations thanks to its second-layer network of masternodes. Masternodes can be called upon to form voting quorums to check whether or not a submitted transaction is valid. If it is valid, the masternodes “lock” the inputs for the transaction and broadcast this information to the network, effectively promising that the transaction will be included in subsequently mined blocks and not allowing any other spending of these inputs during the confirmation time period.
+
+InstantSend technology will allow for cryptocurrencies such as GoByte to compete with nearly instantaneous transaction systems such as credit cards for point-of-sale situations while not relying on a centralized authority. Widespread vendor acceptance of GoByte and InstantSend could revolutionize cryptocurrency by shortening the delay in confirmation of transactions from as long as an hour (with Bitcoin) to as little as a few seconds.
 
 ## 5.3 Bandwidth points consumption rules
 When there is available `Bandwidth points`, no TRX is charged. If a transaction fee is charged, it will be recorded in the fee field in the transaction results. If no transaction fee is charged, meaning that corresponding bandwidth points have been deducted, the fee field will read “0”. There will only be a service charge after a transaction has been written into the blockchain. For more information on the fee field, please see also `Transaction.Result.fee`, with the corresponding proto file at https://github.com/tronprotocol/protocol/blob/master/core/Tron.proto.
