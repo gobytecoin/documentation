@@ -281,4 +281,4 @@ See also: "Add Guide How To Vote"
 
 
 # 11. Relevant files
-See also: https://github.com/tronprotocol/Documentation#documentation-guide
+See also: https://github.com/gobytecoin/Documentation#documentation-guide
