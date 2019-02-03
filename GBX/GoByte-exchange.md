@@ -1,6 +1,6 @@
-# TRON Mainnet - Integration Guide
+# GOBYTE Mainnet - Integration Guide
 
-Connecting to the TRON network is extremely easy and only requires running 1 node on a machine. Once you've connected to the network, you have multiple ways of interacting with the nodes based on your system's requirements. When you're fully integrated, please reach out to the GoByte team so that we can help you verify your setup.
+Connecting to the GBOYTE network is extremely easy and only requires running 1 node on a machine. Once you've connected to the network, you have multiple ways of interacting with the nodes based on your system's requirements. When you're fully integrated, please reach out to the GoByte team so that we can help you verify your setup.
 
 - [Full GoByte Documentation](https://github.com/gobytecoin/Documentation/blob/master/GBX/Gobyte-overview.md)
 
