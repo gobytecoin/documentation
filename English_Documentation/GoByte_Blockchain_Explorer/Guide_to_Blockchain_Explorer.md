@@ -23,7 +23,7 @@ https://explorer.gobyte.network/hash
 
 ### Check node information
 
-This page shows the geographical distribution of TRON’s nodes. From the density of nodes in different regions, users can have a straightforward impression of where they are located. With the embedded Google map, users can zoom in and out of the map to know about the specific details.
+This page shows the geographical distribution of GOBYTE’s nodes. From the density of nodes in different regions, users can have a straightforward impression of where they are located. With the embedded Google map, users can zoom in and out of the map to know about the specific details.
 
 https://explorer.gobyte.network/network
 
