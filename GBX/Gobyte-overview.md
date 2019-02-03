@@ -102,7 +102,7 @@ The Full Node and Master nodes each run a gRPC service that you can connect to.
 ### 4.2.2 HTTP Interface
 The FullNode and MasterNode both have an HTTP Service running on them. All parameters are encoded as `HEX` and returned as Hex or `base58check`. If you're trying to pass an address in, please decode from `base58check` and convert it to `HEX`.
 
-- [HTTP Service API](https://github.com/D0WN3D/Documentation/blob/master/GBX/Gobyte-http.md) -> Edit
+- [HTTP Service API](https://github.com/gobytecoin/Documentation/blob/master/GBX/Gobyte-http.md) -> Edit
 
 - [Address DEBUG Tool](https://paper.gobyte.network/) -> Use "Wallet Details"
 
