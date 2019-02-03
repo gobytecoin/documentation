@@ -96,7 +96,7 @@ Please see the isnsight API.
 The Full Node and Master nodes each run a gRPC service that you can connect to.
 
 - [gRPC Tutorial](https://grpc.io/docs/)
-- [gRPC API](https://github.com/tronprotocol/Documentation/blob/master/English_Documentation/TRON_Protocol/TRON_Wallet_RPC-API.md) -> Edit
+- [gRPC API]https://github.com/gobytecoin/Documentation/blob/master/GBX/grpc-gateway-http.md) -> Edit
 
 
 ### 4.2.2 HTTP Interface
