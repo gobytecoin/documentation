@@ -78,7 +78,7 @@ DISK capacity depends on the actual transaction volume after deployment, but itâ
 
 ## 3.2 Start the full node and Master node
 Please follow the guide here to configure and deploy both nodes: 
-- Master: ???
+- Master: https://medium.com/gobytenetwork/guide-setup-a-gobyte-masternode-cc7dd9c45e50
 - Full: ???
 
 We also provide a script to deploy Master node:
