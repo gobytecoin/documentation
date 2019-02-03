@@ -102,9 +102,9 @@ The Full Node and Master nodes each run a gRPC service that you can connect to.
 ### 4.2.2 HTTP Interface
 The FullNode and MasterNode both have an HTTP Service running on them. All parameters are encoded as `HEX` and returned as Hex or `base58check`. If you're trying to pass an address in, please decode from `base58check` and convert it to `HEX`.
 
-- [HTTP Service API](https://github.com/gobytecoin/Documentation/blob/master/GBX/Gobyte-http.md) -> Edit
+- [HTTP Service API](https://github.com/gobytecoin/Documentation/blob/master/GBX/Gobyte-http.md)
 
-- [Address DEBUG Tool](https://paper.gobyte.network/) -> Use "Wallet Details"
+- [Address DEBUG Tool](https://paper.gobyte.network/) Use "Wallet Details"
 
 # 5. Transaction Fees
 To keep the network operating smoothly, GoByte network requires every account to pay a fee for every transaction. 
@@ -117,7 +117,7 @@ InstantSend autolock	.00001 GBX	Per kB of transaction data
 InstantSend	.0001 GBX	Per transaction input
 PrivateSend	.001 GBX	Per 10 rounds of mixing (average)
 
-See also: ???
+See also: [Link]
 
 ## 5.1 Definition of Private Send
 PrivateSend gives you true financial privacy by obscuring the origins of your funds. 
@@ -177,7 +177,7 @@ Please note that the sha3 protocol we adopt is KECCAK-256.
 ```
 
 ## 6.3 Java code demo
-See: ???
+See: [Link]
 
 # 7. Transaction signing
 See: https://github.com/tronprotocol/Documentation/blob/master/English_Documentation/Procedures_of_transaction_signature_generation.md
@@ -207,31 +207,17 @@ try {
     }
 ```
 
-# 9. Calculation of block ID
-Block ID is a combination of block height and the hash of the blockheader’s raw data. To get block ID, first hash the raw data of the blockheader and replace the first 8 bytes of the hash with the blockheight, as the following:
-```
-private byte[] generateBlockId(long blockNum, byte[] blockHash) {
- byte[] numBytes = Longs.toByteArray(blockNum);
- byte[] hash = blockHash;
- System.arraycopy(numBytes, 0, hash, 0, 8);
- return hash;
-}
-```
-BlockHash is the hash of the raw data of the blockheader, which can be calculated as the following:
-```
-Sha256Hash.of(this.block.getBlockHeader().getRawData().toByteArray())
-```
-# 10. Construction and signature of transaction
+# 9. Construction and signature of transaction
 Based on your own needs there are two methods to construct a transaction. You can either invoke the gRPC / HTTP API through a full node to build the transaction externally, or create the transaction locally.
 
-## 10.1 Invoke APIs on the full node
+## 9.1 Invoke APIs on the full node
 You can construct transactions with corresponding APIs.
 
 - gRPC API: https://github.com/tronprotocol/Documentation/blob/master/English_Documentation/TRON_Protocol/TRON_Wallet_RPC-API.md
 - HTTP API: https://github.com/gobytecoin/Documentation/blob/master/GBX/Gobyte-http.md
 Edit This!
 
-## 10.2 Local construction
+## 9.2 Local construction
 Based on your method of constructing a transaction you are required to populate all fields of a transaction to construct it locally. Please note that you will need to configure the details of reference block and expiration, so you will need to connect to the mainnet during transaction construction. We advise that you set the latest block on the full node as your reference block and production time of the latest block+N minutes as your expiration time. N could be any number you find fit. The backstage condition is `Expiration > production time of the latest block and Expiration < production time of the latest block + 24 hours`. If the condition is fulfilled, then the transaction is legitimate, and if not, the transaction is expired and will not be acknowledged by the network.
 A method of setting reference block: set RefBlockHash as subarray of newest block's hash from 8 to 16, set BlockBytes as subarray of newest block's height from 6 to 8. [The demo code](https://github.com/tronprotocol/wallet-cli/blob/master/src/main/java/org/tron/demo/TransactionSignDemo.java) is as follows:  
 ```
@@ -275,18 +261,18 @@ Look at a method of setting Expiration and transaction timestamp:
     return refTransaction;
   }
 ```
-## 10.3 Signature
+## 9.3 Signature
 After a transaction is constructed, it can be signed using the ECDSA algorithm. For security reasons, we suggest all exchanges to adopt offline signatures. 
 
 https://github.com/tronprotocol/Documentation/blob/master/English_Documentation/TRON_Protocol/Procedures_of_transaction_signature_generation.md
 
 
-## 10.4 Demo
+## 9.4 Demo
 The demo for local transaction construction and signing can be found at:
 https://github.com/tronprotocol/wallet-cli/blob/master/src/main/java/org/tron/demo/TransactionSignDemo.java.
 
 
-# 11. Master Nodes and Voting
+# 10. Master Nodes and Voting
 The Master Nodes(MN) take important roles to build and operate on GoByte network such as block validation and transaction packing. They receive some GBX as rewards. Every 120 seconds a new block is generated. The MNs receive 70% GBX of the reward and transaction fees per block in sequence. This means that the MNs will be rewarded over 8.6625 GBX per block.
 
 All GBX holders can vote for governance objects as long as they have a Master Node available. Master Node can be activated by freezing 1,000 GBX. To vote for governance objects you can use your favorite wallet or [GoByte Pay, the official Web module](https://portal.gobytepay.com/)
@@ -294,5 +280,5 @@ All GBX holders can vote for governance objects as long as they have a Master No
 See also: "Add Guide How To Vote"
 
 
-# 12. Relevant files
+# 11. Relevant files
 See also: https://github.com/tronprotocol/Documentation#documentation-guide
