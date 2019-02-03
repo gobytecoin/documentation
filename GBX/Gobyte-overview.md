@@ -102,9 +102,9 @@ The Full Node and Master nodes each run a gRPC service that you can connect to.
 ### 4.2.2 HTTP Interface
 The FullNode and MasterNode both have an HTTP Service running on them. All parameters are encoded as `HEX` and returned as Hex or `base58check`. If you're trying to pass an address in, please decode from `base58check` and convert it to `HEX`.
 
-- [HTTP Service API](https://github.com/tronprotocol/Documentation/blob/master/TRX/Tron-http.md) -> Edit
+- [HTTP Service API](https://github.com/D0WN3D/Documentation/blob/master/GBX/Gobyte-http.md) -> Edit
 
-- [Address DEBUG Tool](https://github.com/tronprotocol/tron-demo/raw/master/TronConvertTool.zip) -> Edit
+- [Address DEBUG Tool](https://paper.gobyte.network/) -> Use "Wallet Details"
 
 # 5. Transaction Fees
 To keep the network operating smoothly, GoByte network requires every account to pay a fee for every transaction. 
