@@ -8,7 +8,7 @@
 ## Rewards
 
 1.	Proposal reward: the proposals updated once every 1 hour will share 23,760 GBX. The reward will be split in accordance to the votes each proposal receives. Each year, Total reward of candidates will be 285,120 GBX each year
-2.	MasterNode reward: The GOBYTE Protocol network will generate one block every 120 seconds, with each block awarding 8.6625 GBX to MasterNodes. A total of 1,821,204 TRX will be awarded annually to the MasterNodes.
+2.	MasterNode reward: The GOBYTE Protocol network will generate one block every 120 seconds, with each block awarding 8.6625 GBX to MasterNodes. A total of 1,821,204 GBX will be awarded annually to the MasterNodes.
 3.	There will be a reward decrease on the GOBYTE network on November 7, every year.
 
 ## MasterNodes 
