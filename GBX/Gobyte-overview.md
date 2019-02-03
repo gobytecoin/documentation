@@ -41,11 +41,11 @@ Masternode: A client that does all of the above and also enables/performs additi
 
 ### Mainnet
 - Block Explorer: https://explorer.gobyte.network/
-- Config: --
+- Config: testnet=0
 
 ### Testnet
 - Block Explorer: http://texplorer.gobyte.network/
-- Config: --
+- Config: testnet=1
 
 # 3. Operation of node
 
