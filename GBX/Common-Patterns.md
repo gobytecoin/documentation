@@ -10,9 +10,9 @@ Follow these steps to create a private key, then calculate out the resulting
 - https://github.com/gobytecoin/Documentation/blob/master/GBX/GoByte-overview.md#6-user-address-generation
 
 #### - Use an RPC call 
-- `/wallet/generateaddress` to create a `Private Key` and `GoByte Address` pair.
+- `/wallet/getnewaddress` to create a `Private Key` and `GoByte Address` pair.
 
-- `/wallet/createaddress` to pass a `Password String` to generate the matching `GoByte Address`. These strings are hashed into private keys so treat them as such.
+- `/wallet/importprivkey` to pass a `Private Key` to generate the matching `GoByte Address`.
 
 ---
 
@@ -28,7 +28,7 @@ GBX transfers require access to the private key or password for the account.
 4. Broadcast the signed transaction and transaction data onto the network using `/wallet/sendrawtransaction`.
 
 #### - Use an RPC call 
-- `/wallet/sendtoaddress` with a `Password String` to transfer GBX to a destination address.
+- `/wallet/sendtoaddress` with a `Public Key` to transfer GBX to a destination address.
 
 - `/wallet/sendtoaddress` with a `use_is` to transfer GBX to a destination address using InstantSend.
 
@@ -42,7 +42,6 @@ Transactions are confirmed once they're available through the Master Node. The F
 
 #### - Use an RPC call for a transaction/transaction list directly
 - `/wallet/getaddresstxids` to retrieve **ALL** transactions by ID, including **Unconfirmed** transactions.
-- `/wallet/getaddressutxos` to retrieve transactions to an address.
 - `/wallet/gettransaction` to retrieve metadata about a transaction, including fees, block number and block production time.
 
 #### - Use an RPC call for the block
