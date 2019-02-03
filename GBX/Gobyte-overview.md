@@ -228,7 +228,7 @@ Based on your own needs there are two methods to construct a transaction. You ca
 You can construct transactions with corresponding APIs.
 
 - gRPC API: https://github.com/tronprotocol/Documentation/blob/master/English_Documentation/TRON_Protocol/TRON_Wallet_RPC-API.md
-- HTTP API: https://github.com/tronprotocol/Documentation/blob/master/TRX/Tron-http.md
+- HTTP API: https://github.com/D0WN3D/Documentation/blob/master/GBX/Gobyte-http.md
 Edit This!
 
 ## 10.2 Local construction
