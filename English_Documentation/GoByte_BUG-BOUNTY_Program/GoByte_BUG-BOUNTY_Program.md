@@ -1,3 +1,3 @@
 # GoByte bug bounty has moved to HackerOne
 
-https://hackerone.com/gobytenetwork
+https://hackerone.com/gobyte_network
