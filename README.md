@@ -4,11 +4,10 @@
 
 # Documentation Guide
 
-+ If you want to know more about the recent progress of the GoByte project, please check out [GoByte Introduction](https://github.com/gobytecoin/Documentation/tree/master/English_Documentation/Gobyte_Introduction).  
-+ If you want to know more about the protocol documentation, please check out [GoByte Protocol](https://github.com/gobytecoin/Documentation/tree/master/English_Documentation/Gobyte_Protocol).  
-+ If you want to know more about the SR information, vote, or token creation, please check out [GoByte blockchain explorer](https://github.com/gobytecoin/Documentation/tree/master/English_Documentation/Gobyte_Blockchain_Explorer). 
++ If you want to know more about the recent progress of the GoByte project, please check out [GoByte Introduction](https://github.com/gobytecoin/Documentation/tree/master/English_Documentation/GoByte_Introduction).  
++ If you want to know more about the protocol documentation, please check out [GoByte Protocol](https://github.com/gobytecoin/Documentation/tree/master/English_Documentation/GoByte_Protocol).  
++ If you want to know more about the SR information, vote, or token creation, please check out [GoByte blockchain explorer](https://github.com/gobytecoin/Documentation/tree/master/English_Documentation/GoByte_Blockchain_Explorer). 
 + If you want to know more about GoByte Wallet, please check out [Android Wallet](https://github.com/gobytecoin/Documentation/blob/master/English_Documentation/Android_Wallet/Guide_to_Android_Wallet.md).
-+ For more information about Virtual Machine, please check out [TVM](https://github.com/gobytecoin/Documentation/blob/master/English_Documentation/TRON_Virtual_Machine/Virtual_Machine_Introduction.md).
 + For latest process of GoByte, please follow the [GoByte documentation](https://github.com/gobytecoin/Documentation/tree/master/English_Documentation).
 
 # Master Nodes Guide
