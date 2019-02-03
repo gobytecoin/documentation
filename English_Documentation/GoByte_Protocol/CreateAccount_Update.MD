@@ -4,6 +4,5 @@ You can register a random offline key pair (including the address and private ke
 
 - Directly call the Create Account api
 - Transfer GBX to the new address
-- Transfer any kind of token to the new address
 
-After the transaction is confirmed by the network, you can query the information of the account that matches the address in the GOBYTE network. Creating an account burns 0.1 GBX from the creator, or consumes the bandwidth acquired by freezing. **【Note】** After Odyssey 3.0 goes online, with the confirmation of the committee, creating an account will burn 0.1 GBX from the creator without consuming bandwidth.
+After the transaction is confirmed by the network, you can query the information of the account that matches the address in the GOBYTE network. Creating an account burns no GBX.
