@@ -1,4 +1,4 @@
-# G0BYTE
+# GOBYTE
 
 ## What is GOBYTE?
 
