@@ -24,7 +24,7 @@ First of all, you need to run a Master Node. For more information about running 
 
 **Step2.** 
 
-Visit our blockchain explorer to check for your Master Node, please take [Running a Master Node](https://github.com/gobytecoin/Documentation/blob/master/English_Documentation/TRON_Blockchain_Explorer_Introduction/How_to_run_a_Super_Representative.md).
+Visit our blockchain explorer to check for your Master Node, please take [Running a Master Node](https://medium.com/gobytenetwork/guide-setup-a-gobyte-masternode-cc7dd9c45e50).
 
 **Step3.** 
 
