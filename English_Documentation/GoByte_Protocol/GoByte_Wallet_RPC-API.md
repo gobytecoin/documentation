@@ -70,9 +70,9 @@ Masternode only.
 4.3 Parameters  
 vote-alias: Vote on a governance object by masternode alias (using masternode.conf setup).  
 alias-name: Name set inside masternode.conf setup.  
-vote-many: Vote on a governance object by all masternodes (using masternode.conf setup) 
+vote-many: Vote on a governance object by all masternodes (using masternode.conf setup)   
 vote-conf: Vote on a governance object by masternode configured in gobyte.conf  
-governance-hash: Hash code of the proposal. 
+governance-hash: Hash code of the proposal.  
 4.4 Returns 
 Success/Failed: returns Vote submited successfully / Vote failed.  
 4.5 Function  
