@@ -115,16 +115,16 @@ Block: information on current block.
 Inquire the latest block. 
 
 ## 19. Get block hash by block index
-19.1 Interface statement
-rpc getblockhash (index) returns (BlockHash) {};  
-19.2 Nodes
-All nodes.  
-19.3 Parameters
-index: block height.  
-19.4 Returns
-BlockHash: block hash information.  
-19.5 Function
-Returning the block hash at designated height.
+19.1 Interface statement      
+rpc getblockhash (index) returns (BlockHash) {};    
+19.2 Nodes    
+All nodes.    
+19.3 Parameters     
+index: block height.    
+19.4 Returns    
+BlockHash: block hash information.    
+19.5 Function   
+Returning the block hash at designated height.  
 
 ## 21. Query of in-wallet transaction by ID
 21.1 Interface statement
