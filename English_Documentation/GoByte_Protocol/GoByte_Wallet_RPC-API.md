@@ -38,16 +38,16 @@ rpc sendtoaddress (gobyteaddress) (amount) (comment/comment-to/subtractfeefromam
 Any node.  
 2.3	Parameters  
 gobyteaddress: addresses of the recipient. 
-amount: amount of transfer (in GBX).
-comment:(string, optional) A comment used to store what the transaction is for.
-comment-to:(string, optional) A comment to store the name of the person or organization to which you're sending the transaction.
-subtractfeefromamount:(boolean, optional, default=false) The fee will be deducted from the amount being sent.
-use_is:(bool, optional) Send this transaction as InstantSend (default: false)
-use_ps:(bool, optional) Use anonymized funds only (default: false)
+amount: amount of transfer (in GBX). 
+comment:(string, optional) A comment used to store what the transaction is for. 
+comment-to:(string, optional) A comment to store the name of the person or organization to which you're sending the transaction. 
+subtractfeefromamount:(boolean, optional, default=false) The fee will be deducted from the amount being sent. 
+use_is:(bool, optional) Send this transaction as InstantSend (default: false) 
+use_ps:(bool, optional) Use anonymized funds only (default: false) 
 2.4	Returns  
-Transaction: returns transaction id of the transfer;
+Transaction: returns transaction id of the transfer; 
 2.5	Function  
-Transfer. Creation of a transaction of transfer.
+Transfer. Creation of a transaction of transfer. 
 
 ## 3. Transaction broadcasting
 
