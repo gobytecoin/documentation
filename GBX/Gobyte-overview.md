@@ -214,7 +214,6 @@ You can construct transactions with corresponding APIs.
 
 - gRPC API: https://github.com/gobytecoin/Documentation/blob/master/English_Documentation/GoByte_Protocol/GoByte_Wallet_RPC-API.md
 - HTTP API: https://github.com/gobytecoin/Documentation/blob/master/GBX/Gobyte-http.md
-Edit This!
 
 ## 9.2 Local construction
 Based on your method of constructing a transaction you are required to populate all fields of a transaction to construct it locally. Please note that you will need to configure the details of reference block and expiration, so you will need to connect to the mainnet during transaction construction. We advise that you set the latest block on the full node as your reference block and production time of the latest block+N minutes as your expiration time. N could be any number you find fit. The backstage condition is `Expiration > production time of the latest block and Expiration < production time of the latest block + 24 hours`. If the condition is fulfilled, then the transaction is legitimate, and if not, the transaction is expired and will not be acknowledged by the network.
