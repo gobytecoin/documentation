@@ -63,7 +63,7 @@ hex: (string) The transaction hash in hex. Note: return of success doesn’t nec
 Transfer. Sending signed transaction information to node, and broadcasting it to the entire network after masternode verification.
 
 # 4. Vote
-4.1 Interface statement
+4.1 Interface statement     
 rpc gobject (vote-alias|vote-many|vote-conf) (governance-hash) (funding|valid|delete) (yes|no|abstain) [optional:alias-name] returns (Success/Failed){};  
 4.2 Node
 Masternode only.  
