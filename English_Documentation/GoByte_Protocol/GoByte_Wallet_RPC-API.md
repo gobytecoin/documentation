@@ -79,16 +79,16 @@ Success/Failed: returns Vote submited successfully / Vote failed.
 Vote. Masternode holders can only vote for proposals, with no more votes than the amount of Masternodes they hold.  
 
 ## 8. Query of list of Master Nodes  
-8.1 Interface statement
-rpc masternodelist (EmptyMessage) returns (MasternodeList) {};  
-8.2 Nodes
-All nodes.
-8.3 Parameters
-EmptyMessage: null.  
-8.4 Returns
-MasternodeList: list of masternodes including detailed information of their status.  
-8.5 Function
-Query of all masternodes prior to voting returning detailed information on each masternode for user's reference.
+8.1 Interface statement 
+rpc masternodelist (EmptyMessage) returns (MasternodeList) {};    
+8.2 Nodes 
+All nodes.  
+8.3 Parameters  
+EmptyMessage: null.   
+8.4 Returns 
+MasternodeList: list of masternodes including detailed information of their status.   
+8.5 Function  
+Query of all masternodes prior to voting returning detailed information on each masternode for user's reference.  
 
 ## 13. Query of all peers
 13.1 Interface statement
