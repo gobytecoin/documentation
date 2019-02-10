@@ -263,7 +263,7 @@ Look at a method of setting Expiration and transaction timestamp:
 ## 9.3 Signature
 After a transaction is constructed, it can be signed using the ECDSA algorithm. For security reasons, we suggest all exchanges to adopt offline signatures. 
 
-https://github.com/tronprotocol/Documentation/blob/master/English_Documentation/TRON_Protocol/Procedures_of_transaction_signature_generation.md
+https://github.com/gobytecoin/Documentation/blob/master/English_Documentation/Procedures_of_transaction_signature_generation.md
 
 
 ## 9.4 Demo
