@@ -30,19 +30,7 @@
 When a full node receives the transaction, it will verify the signature, comparing an address calculated with hash, r, s and v with the address of the contract. Signature is successfully verified if the two addresses match.
 
 # III.	Example of code
-```java
-    public static Transaction sign(Transaction transaction, ECKey myKey) {
-    
-        Transaction.Builder transactionBuilderSigned = transaction.toBuilder();  
-        byte[] hash = sha256(transaction.getRawData().toByteArray());  
-        List<Contract> listContract = transaction.getRawData().getContractList();  
-        
-            for (int i = 0; i < listContract.size(); i++) {
-            
-                ECDSASignature signature = myKey.sign(hash);    
-                ByteString bsSign = ByteString.copyFrom(signature.toByteArray());    
-                //Each contract may be signed with a different private key in the future.
-                transactionBuilderSigned.addSignature( bsSign );
-                 
-                }
+```
+EXAMPLE HERE
+
 ```
