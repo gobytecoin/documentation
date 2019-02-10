@@ -103,16 +103,16 @@ NodeList: returns a list of nodes, including their IPs and ports.
 Listing the IPs and ports of connected nodes.
 
 ## 18. Get current block
-18.1 Interface statement
+18.1 Interface statement      
 rpc getblockcount (EmptyMessage) returns (Block) {};  
-18.2 Nodes
-All nodes.
-18.3 Parameters
-EmptyMessage: null.  
-18.4 Returns
-Block: information on current block. 
-18.5 Function
-Inquire the latest block.
+18.2 Nodes  
+All nodes.  
+18.3 Parameters 
+EmptyMessage: null.   
+18.4 Returns    
+Block: information on current block.  
+18.5 Function 
+Inquire the latest block. 
 
 ## 19. Get block hash by block index
 19.1 Interface statement
