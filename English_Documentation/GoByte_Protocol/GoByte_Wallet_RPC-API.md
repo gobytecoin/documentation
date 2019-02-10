@@ -56,7 +56,7 @@ rpc sendrawtransaction (hexstring) returns (hex) {};
 3.2	Node  
 Any node. 
 3.3	Parameters  
-hexstring:(string, required) The hex string of the raw transaction.
+hexstring:(string, required) The hex string of the raw transaction. 
 3.4	Returns  
 hex: (string) The transaction hash in hex. Note: return of success doesn’t necessarily mean completion of transaction.  
 3.5	Function  
