@@ -151,27 +151,27 @@ TransactionList: transaction list.
 Query of all transactions made by one given address.  
 
 ## 32. Transaction signing  
-32.1 Interface statement  
-rpc signrawtransaction (hexstring) returns (TransactionHex) (Complete) (Errors) () {};  
-32.2 Node  
-Any node.  
-32.3 Parameters  
-hexstring: Transaction to be signed and the private key to sign with.  
-32.4 Returns  
-TransactionHex: The hex-encoded raw transaction with signature(s).
-Complete: true|false, (boolean) If the transaction has a complete set of signatures.
-Errors: (json array of objects) Script verification errors (if there are any).
+32.1 Interface statement      
+rpc signrawtransaction (hexstring) returns (TransactionHex) (Complete) (Errors) () {};    
+32.2 Node     
+Any node.     
+32.3 Parameters   
+hexstring: Transaction to be signed and the private key to sign with.     
+32.4 Returns    
+TransactionHex: The hex-encoded raw transaction with signature(s).      
+Complete: true|false, (boolean) If the transaction has a complete set of signatures.    
+Errors: (json array of objects) Script verification errors (if there are any).    
 
 ## 33. Address and private key creation
-33.1 Interface statement  
-rpc getnewaddress (AddressLabel) returns (Address) {};  
-33.2 Node  
-Any Node.  
+33.1 Interface statement      
+rpc getnewaddress (AddressLabel) returns (Address) {};    
+33.2 Node   
+Any Node.   
 33.3 Parameters  
-AddressLabel: Label shown inside the wallet.  
-33.4 Returns  
-Address: address.
-
+AddressLabel: Label shown inside the wallet.    
+33.4 Returns    
+Address: address.   
+  
 ## 35. Generate address by importing a private key  
 35.1 Interface statement  
 rpc importprivkey (PrivateKey) returns (PublicAddress) {};  
