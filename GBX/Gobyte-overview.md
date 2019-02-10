@@ -180,8 +180,7 @@ Please note that the sha3 protocol we adopt is KECCAK-256.
 See: [Link]
 
 # 7. Transaction signing
-See: https://github.com/tronprotocol/Documentation/blob/master/English_Documentation/Procedures_of_transaction_signature_generation.md
-Edit This
+See: https://github.com/gobytecoin/Documentation/blob/master/English_Documentation/Procedures_of_transaction_signature_generation.md
 
 # 8. Calculation of transaction ID
 Hash the Raw data of the transaction.
