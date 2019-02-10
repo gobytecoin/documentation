@@ -54,9 +54,9 @@ Transfer. Creation of a transaction of transfer.
 3.1	Interface statement  
 rpc sendrawtransaction (hexstring) returns (hex) {};  
 3.2	Node  
-Any node. 
+Any node.  
 3.3	Parameters  
-hexstring:(string, required) The hex string of the raw transaction. 
+hexstring:  (string, required) The hex string of the raw transaction. 
 3.4	Returns  
 hex: (string) The transaction hash in hex. Note: return of success doesn’t necessarily mean completion of transaction.  
 3.5	Function  
@@ -67,16 +67,16 @@ Transfer. Sending signed transaction information to node, and broadcasting it to
 rpc gobject (vote-alias|vote-many|vote-conf) (governance-hash) (funding|valid|delete) (yes|no|abstain) [optional:alias-name] returns (Success/Failed){};  
 4.2 Node
 Masternode only.  
-4.3 Parameters
-vote-alias: Vote on a governance object by masternode alias (using masternode.conf setup).
-alias-name: Name set inside masternode.conf setup.
-vote-many: Vote on a governance object by all masternodes (using masternode.conf setup)
-vote-conf: Vote on a governance object by masternode configured in gobyte.conf
-governance-hash: Hash code of the proposal.
-4.4 Returns
+4.3 Parameters  
+vote-alias: Vote on a governance object by masternode alias (using masternode.conf setup).  
+alias-name: Name set inside masternode.conf setup.  
+vote-many: Vote on a governance object by all masternodes (using masternode.conf setup) 
+vote-conf: Vote on a governance object by masternode configured in gobyte.conf  
+governance-hash: Hash code of the proposal. 
+4.4 Returns 
 Success/Failed: returns Vote submited successfully / Vote failed.  
-4.5 Function
-Vote. Masternode holders can only vote for proposals, with no more votes than the amount of Masternodes they hold.
+4.5 Function  
+Vote. Masternode holders can only vote for proposals, with no more votes than the amount of Masternodes they hold.  
 
 ## 8. Query of list of Master Nodes  
 8.1 Interface statement
