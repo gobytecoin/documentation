@@ -22,7 +22,7 @@ Log in to gitter with your github account to participate in GBX’s discussions.
 
 ## GoByte Forum
 
-http://commynity.gobyte.network
+http://community.gobyte.network
 
 ## GoByte Foundation
 
