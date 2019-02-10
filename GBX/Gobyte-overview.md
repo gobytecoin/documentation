@@ -218,47 +218,10 @@ Edit This!
 
 ## 9.2 Local construction
 Based on your method of constructing a transaction you are required to populate all fields of a transaction to construct it locally. Please note that you will need to configure the details of reference block and expiration, so you will need to connect to the mainnet during transaction construction. We advise that you set the latest block on the full node as your reference block and production time of the latest block+N minutes as your expiration time. N could be any number you find fit. The backstage condition is `Expiration > production time of the latest block and Expiration < production time of the latest block + 24 hours`. If the condition is fulfilled, then the transaction is legitimate, and if not, the transaction is expired and will not be acknowledged by the network.
-A method of setting reference block: set RefBlockHash as subarray of newest block's hash from 8 to 16, set BlockBytes as subarray of newest block's height from 6 to 8. [The demo code](https://github.com/tronprotocol/wallet-cli/blob/master/src/main/java/org/tron/demo/TransactionSignDemo.java) is as follows:  
+A method of setting reference block: set RefBlockHash as subarray of newest block's hash from 8 to 16, set BlockBytes as subarray of newest block's height from 6 to 8. [The demo code](#) is as follows:  
 ```
- public static Transaction setReference(Transaction transaction, Block newestBlock) {
-    long blockHeight = newestBlock.getBlockHeader().getRawData().getNumber();
-    byte[] blockHash = getBlockHash(newestBlock).getBytes();
-    byte[] refBlockNum = ByteArray.fromLong(blockHeight);
-    Transaction.raw rawData = transaction.getRawData().toBuilder()
-        .setRefBlockHash(ByteString.copyFrom(ByteArray.subArray(blockHash, 8, 16)))
-        .setRefBlockBytes(ByteString.copyFrom(ByteArray.subArray(refBlockNum, 6, 8)))
-        .build();
-    return transaction.toBuilder().setRawData(rawData).build();
-  }
-```
-Look at a method of setting Expiration and transaction timestamp:
-```
-  public static Transaction createTransaction(byte[] from, byte[] to, long amount) {
-    Transaction.Builder transactionBuilder = Transaction.newBuilder();
-    Block newestBlock = WalletClient.getBlock(-1);
+EXAMPLE HERE
 
-    Transaction.Contract.Builder contractBuilder = Transaction.Contract.newBuilder();
-    Contract.TransferContract.Builder transferContractBuilder = Contract.TransferContract
-        .newBuilder();
-    transferContractBuilder.setAmount(amount);
-    ByteString bsTo = ByteString.copyFrom(to);
-    ByteString bsOwner = ByteString.copyFrom(from);
-    transferContractBuilder.setToAddress(bsTo);
-    transferContractBuilder.setOwnerAddress(bsOwner);
-    try {
-      Any any = Any.pack(transferContractBuilder.build());
-      contractBuilder.setParameter(any);
-    } catch (Exception e) {
-      return null;
-    }
-    contractBuilder.setType(Transaction.Contract.ContractType.TransferContract);
-    transactionBuilder.getRawDataBuilder().addContract(contractBuilder)
-        .setTimestamp(System.currentTimeMillis())//timestamp should be in millisecond format
-        .setExpiration(newestBlock.getBlockHeader().getRawData().getTimestamp() + 10 * 60 * 60 * 1000);//exchange can set Expiration by needs
-    Transaction transaction = transactionBuilder.build();
-    Transaction refTransaction = setReference(transaction, newestBlock);
-    return refTransaction;
-  }
 ```
 ## 9.3 Signature
 After a transaction is constructed, it can be signed using the ECDSA algorithm. For security reasons, we suggest all exchanges to adopt offline signatures. 
@@ -268,7 +231,7 @@ https://github.com/gobytecoin/Documentation/blob/master/English_Documentation/Pr
 
 ## 9.4 Demo
 The demo for local transaction construction and signing can be found at:
-https://github.com/tronprotocol/wallet-cli/blob/master/src/main/java/org/tron/demo/TransactionSignDemo.java.
+[LINK HERE]
 
 
 # 10. Master Nodes and Voting
