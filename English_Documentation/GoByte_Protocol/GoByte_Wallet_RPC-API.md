@@ -127,28 +127,28 @@ BlockHash: block hash information.
 Returning the block hash at designated height.  
 
 ## 21. Query of in-wallet transaction by ID
-21.1 Interface statement
-rpc gettransaction (txid) returns (TransactionDetails) {};  
-21.2 Node
-All nodes.  
-21.3 Parameters
-txid: transaction ID or Hash.  
-21.4 Returns
-TransactionDetails: Queried transaction.  
-21.5 Function
-Query of transaction details by ID which is the Hash of transaction.
+21.1 Interface statement      
+rpc gettransaction (txid) returns (TransactionDetails) {};    
+21.2 Node   
+All nodes.    
+21.3 Parameters   
+txid: transaction ID or Hash.   
+21.4 Returns      
+TransactionDetails: Queried transaction.    
+21.5 Function 
+Query of transaction details by ID which is the Hash of transaction.  
 
 ## 24. Query of transactions in and out by address
-24.1 Interface statement
-rpc getaddresstxids (Address) returns (TransactionList) {};  
-24.2 Node
-All nodes.(requires addressindex to be enabled)   
-24.3 Parameters
-Address: The address you want to check.  
-24.4 Returns
-TransactionList: transaction list.  
-24.5 Function
-Query of all transactions made by one given address.
+24.1 Interface statement      
+rpc getaddresstxids (Address) returns (TransactionList) {};   
+24.2 Node   
+All nodes.(requires addressindex to be enabled)     
+24.3 Parameters   
+Address: The address you want to check.   
+24.4 Returns    
+TransactionList: transaction list.    
+24.5 Function     
+Query of all transactions made by one given address.  
 
 ## 32. Transaction signing  
 32.1 Interface statement  
