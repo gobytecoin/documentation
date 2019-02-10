@@ -73,7 +73,7 @@ alias-name: Name set inside masternode.conf setup.
 vote-many: Vote on a governance object by all masternodes (using masternode.conf setup)   
 vote-conf: Vote on a governance object by masternode configured in gobyte.conf  
 governance-hash: Hash code of the proposal.  
-4.4 Returns 
+4.4 Returns     
 Success/Failed: returns Vote submited successfully / Vote failed.  
 4.5 Function  
 Vote. Masternode holders can only vote for proposals, with no more votes than the amount of Masternodes they hold.  
@@ -85,21 +85,21 @@ rpc masternodelist (EmptyMessage) returns (MasternodeList) {};
 All nodes.  
 8.3 Parameters  
 EmptyMessage: null.   
-8.4 Returns 
+8.4 Returns     
 MasternodeList: list of masternodes including detailed information of their status.   
 8.5 Function  
 Query of all masternodes prior to voting returning detailed information on each masternode for user's reference.  
 
 ## 13. Query of all peers
-13.1 Interface statement
-rpc getpeerinfo (EmptyMessage) returns (NodeList) {};  
-13.2 Nodes
-All nodes.
-13.3 Parameters
-EmptyMessage: null.  
-13.4 Returns
-NodeList: returns a list of nodes, including their IPs and ports.  
-13.5 Function
+13.1 Interface statement      
+rpc getpeerinfo (EmptyMessage) returns (NodeList) {};   
+13.2 Nodes  
+All nodes.  
+13.3 Parameters 
+EmptyMessage: null.   
+13.4 Returns      
+NodeList: returns a list of nodes, including their IPs and ports.   
+13.5 Function     
 Listing the IPs and ports of connected nodes.
 
 ## 18. Get current block
