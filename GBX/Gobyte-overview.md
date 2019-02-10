@@ -212,7 +212,7 @@ Based on your own needs there are two methods to construct a transaction. You ca
 ## 9.1 Invoke APIs on the full node
 You can construct transactions with corresponding APIs.
 
-- gRPC API: https://github.com/tronprotocol/Documentation/blob/master/English_Documentation/TRON_Protocol/TRON_Wallet_RPC-API.md
+- gRPC API: https://github.com/gobytecoin/Documentation/blob/master/English_Documentation/GoByte_Protocol/GoByte_Wallet_RPC-API.md
 - HTTP API: https://github.com/gobytecoin/Documentation/blob/master/GBX/Gobyte-http.md
 Edit This!
 
