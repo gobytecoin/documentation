@@ -78,108 +78,108 @@ Success/Failed: returns Vote submited successfully / Vote failed.
 4.5 Function  
 Vote. Masternode holders can only vote for proposals, with no more votes than the amount of Masternodes they hold.  
 
-## 8. Query of list of Master Nodes  
-8.1 Interface statement     
+## 5. Query of list of Master Nodes  
+5.1 Interface statement     
 rpc masternodelist (EmptyMessage) returns (MasternodeList) {};    
-8.2 Nodes 
+5.2 Nodes 
 All nodes.  
-8.3 Parameters  
+5.3 Parameters  
 EmptyMessage: null.   
-8.4 Returns     
+5.4 Returns     
 MasternodeList: list of masternodes including detailed information of their status.   
-8.5 Function  
+5.5 Function  
 Query of all masternodes prior to voting returning detailed information on each masternode for user's reference.  
 
-## 13. Query of all peers
-13.1 Interface statement      
+## 6. Query of all peers
+6.1 Interface statement      
 rpc getpeerinfo (EmptyMessage) returns (NodeList) {};   
-13.2 Nodes  
+6.2 Nodes  
 All nodes.  
-13.3 Parameters 
+6.3 Parameters 
 EmptyMessage: null.   
-13.4 Returns      
+6.4 Returns      
 NodeList: returns a list of nodes, including their IPs and ports.   
-13.5 Function     
+6.5 Function     
 Listing the IPs and ports of connected nodes.
 
-## 18. Get current block
-18.1 Interface statement      
+## 7. Get current block
+7.1 Interface statement      
 rpc getblockcount (EmptyMessage) returns (Block) {};  
-18.2 Nodes  
+7.2 Nodes  
 All nodes.  
-18.3 Parameters 
+7.3 Parameters 
 EmptyMessage: null.   
-18.4 Returns    
+7.4 Returns    
 Block: information on current block.  
-18.5 Function 
+7.5 Function 
 Inquire the latest block. 
 
-## 19. Get block hash by block index
-19.1 Interface statement      
+## 8. Get block hash by block index
+8.1 Interface statement      
 rpc getblockhash (index) returns (BlockHash) {};    
-19.2 Nodes    
+8.2 Nodes    
 All nodes.    
-19.3 Parameters     
+8.3 Parameters     
 index: block height.    
-19.4 Returns    
+8.4 Returns    
 BlockHash: block hash information.    
-19.5 Function   
+8.5 Function   
 Returning the block hash at designated height.  
 
-## 21. Query of in-wallet transaction by ID
-21.1 Interface statement      
+## 9. Query of in-wallet transaction by ID
+9.1 Interface statement      
 rpc gettransaction (txid) returns (TransactionDetails) {};    
-21.2 Node   
+9.2 Node   
 All nodes.    
-21.3 Parameters   
+9.3 Parameters   
 txid: transaction ID or Hash.   
-21.4 Returns      
+9.4 Returns      
 TransactionDetails: Queried transaction.    
-21.5 Function 
+9.5 Function 
 Query of transaction details by ID which is the Hash of transaction.  
 
-## 24. Query of transactions in and out by address
-24.1 Interface statement      
+## 10. Query of transactions in and out by address
+10.1 Interface statement      
 rpc getaddresstxids (Address) returns (TransactionList) {};   
-24.2 Node   
+10.2 Node   
 All nodes.(requires addressindex to be enabled)     
-24.3 Parameters   
+10.3 Parameters   
 Address: The address you want to check.   
-24.4 Returns    
+10.4 Returns    
 TransactionList: transaction list.    
-24.5 Function     
+10.5 Function     
 Query of all transactions made by one given address.  
 
-## 32. Transaction signing  
-32.1 Interface statement        
+## 11. Transaction signing  
+11.1 Interface statement        
 rpc signrawtransaction (hexstring) returns (TransactionHex) (Complete) (Errors) () {};      
-32.2 Node       
+11.2 Node       
 Any node.       
-32.3 Parameters     
+11.3 Parameters     
 hexstring: Transaction to be signed and the private key to sign with.       
-32.4 Returns      
+11.4 Returns      
 TransactionHex: The hex-encoded raw transaction with signature(s).        
 Complete: true|false, (boolean) If the transaction has a complete set of signatures.     
 Errors: (json array of objects) Script verification errors (if there are any).     
 
-## 33. Address and private key creation
-33.1 Interface statement      
+## 12. Address and private key creation
+12.1 Interface statement      
 rpc getnewaddress (AddressLabel) returns (Address) {};    
-33.2 Node   
+12.2 Node   
 Any Node.   
-33.3 Parameters  
+12.3 Parameters  
 AddressLabel: Label shown inside the wallet.    
-33.4 Returns    
+12.4 Returns    
 Address: address.   
   
-## 35. Generate address by importing a private key  
-35.1 Interface statement  
+## 13. Generate address by importing a private key  
+13.1 Interface statement  
 rpc importprivkey (PrivateKey) returns (PublicAddress) {};  
-35.2 Nodes  
+13.2 Nodes  
 FullNode and SolidityNode.  
-35.3 Parameters  
+13.3 Parameters  
 PrivateKey: Private Key.  
-35.4 Returns  
+13.4 Returns  
 PublicAddress: generate the public address according to the private key.  
-35.5 Function  
+13.5 Function  
 Address and private key usage. Please invoke this API only on a trusted offline node to prevent private key leakage.
